@@ -16,7 +16,7 @@ cnpm install --save dva-core dva-loading
 
 ### 克隆到本地后
 ```
-cd epaneltest
+cd flowers
 npm install 
 npm run dev:weapp
 
