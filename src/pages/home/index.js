@@ -1,12 +1,9 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View, Swiper, SwiperItem } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
-import { AtTabBar } from 'taro-ui'
-import Questionaires from '../../components/questionaire'
+import { AtTabBar,AtSearchBar } from 'taro-ui'
+import Card from '../../components/Card'
 import './index.scss';
-import List from '../../components/list';
-import Participate from '../participates'
-import image from '../../assets/images/u128.png'
 
 @connect(({ home, common }) => ({
   ...home,
@@ -22,6 +19,7 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      value:''
     }
     this.handleClickBar = this.handleClickBar.bind(this)
   }
@@ -50,7 +48,11 @@ class Home extends Component {
     }
   }
  
-
+  onChange (value) {
+    this.setState({
+      value: value
+    })
+  }
  
  
 
@@ -76,6 +78,13 @@ class Home extends Component {
                 <Image src='../../assets/images/f3.jpg' style='width: 100%; height: 100%'></Image>
             </SwiperItem>
           </Swiper>
+          {/* 搜索框 */}
+          <AtSearchBar
+            value={this.state.value}
+            onChange={this.onChange.bind(this)}
+          />
+          {/* 栅栏格 */}
+          <Card />
         {/* 底部bar */}
         <AtTabBar
           fixed
