@@ -23,7 +23,7 @@ class Home extends Component {
     super(props)
     this.state = {
       value:'',
-      barValue:0
+      barValue:3
     }
     this.handleClickBar = this.handleClickBar.bind(this)
   }

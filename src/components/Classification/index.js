@@ -13,7 +13,7 @@ class Classification extends Component {
 
   render() {
     return (
-        <View className='shopping-page'>
+        <View className='class-page'>
             222
         </View>
     )
