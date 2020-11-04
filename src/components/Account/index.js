@@ -92,7 +92,7 @@ class Account extends Component {
      
         let jsonData = {
           access_token: access_token,
-          touser: 'oqRjy5HhzKMejHboHXr8adB0Mc94',
+          touser: 'oqRjy5HhzKMejHboHXr8adB0Mc94',//即openid
           template_id: 'UKvhQ1woY5ACsj5lou4yEm5wF8jLtvoYPrTB_0LEIYo',
           page: "pages/home/index",
           data: {
